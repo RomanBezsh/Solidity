@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/main.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Add product</h2>
+    <form id="form">
+        <div>
+            <label>Name</label>
+            <input id="name" type="text"/>
+        </div>
+        
+        <div>
+            <label>Description</label>
+            <input id="desc" type="text"/>
+        </div>
+        
+        <div>
+            <label>Image URL</label>
+            <input id="image" type="url" />
+        </div>
+
+
+        <input type="submit"/>
+    </form>
+
+    <h2>Products</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Address</th>
+                <th>Image</th>
+                <th>Created</th>
+            </tr>
+        </thead>
+        <tbody id="productsBody"></tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.15.0/ethers.umd.min.js"></script>
+    <script src="src/main.js"></script>
+</body>
+</html>
