@@ -145,13 +145,13 @@ const renderPosts = async (filter = "all") => {
 
             div.innerHTML = `
                 <div class="post-meta">
-                    Автор: <b class="post-author">${post.author}</b><br>
-                    Дата: ${new Date(Number(post.timestamp) * 1000).toLocaleString()}
+                    Author: <b class="post-author">${post.author}</b><br>
+                    Date: ${new Date(Number(post.timestamp) * 1000).toLocaleString()}
                 </div>
                 <p class="post-message">${post.message}</p>
                 <div class="post-actions">
                     <button id="like-${index}" class="like-btn ${post.iLiked ? 'active' : ''}">
-                        ${post.iLiked ? '❤️' : '🤍'} Лайк (${post.likeCount})
+                        ${post.iLiked ? '❤️' : '🤍'} Like (${post.likeCount})
                     </button>
                 </div>
             `;
@@ -161,11 +161,11 @@ const renderPosts = async (filter = "all") => {
             if (post.author.toLowerCase() === current_account.toLowerCase()) {
                 const delBtn = document.createElement("button");
                 delBtn.className = "delete-btn";
-                delBtn.textContent = "🗑 Видалити";
+                delBtn.textContent = "🗑 Delete";
                 delBtn.onclick = async () => {
                     try {
                         await contract.methods.delete_post(index).send({ from: current_account });
-                    } catch (e) { console.error("Видалення відмінено", e); }
+                    } catch (e) { console.error("Deletion cancelled", e); }
                 };
                 div.appendChild(delBtn);
             }
@@ -185,6 +185,7 @@ const clearPosts = async () => {
         alert("Clear posts error. See console logs.");
     }
 }
+
 
 
 
