@@ -1,0 +1,72 @@
+#posts {
+    border: 1px solid;
+    min-height: 200px;
+}
+
+#posts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.post-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+}
+
+.post-meta {
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.post-author {
+    color: darkred;
+}
+
+.post-message {
+    font-size: 1.1em;
+    margin: 10px 0;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.like-btn {
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.like-btn.active {
+    background: #e7f3ff;
+    border-color: #1877f2;
+    color: #1877f2;
+}
+
+.delete-btn {
+    margin-top: 12px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}
