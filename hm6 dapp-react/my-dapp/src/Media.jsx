@@ -4,7 +4,7 @@ import lighthouse from "@lighthouse-web3/sdk"
 
 function Media() {
 
-    const apiKey = 'ad062c1d.991e297f3e64479db063f1b499d7e710';
+    const apiKey = '####';
     let imageUrl = 'https://gateway.lighthouse.storage/ipfs/'
 
     const [file, setFile] = useState('');
@@ -118,5 +118,6 @@ function Media() {
         </>
     )
 }
+
 
 export default Media;
